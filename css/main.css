@@ -1,0 +1,222 @@
+@font-face {
+  font-family: 'ReithSansReg';
+  src: url('../assets/BBCReithSans_Rg.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'ReithSansMed';
+  src: url("../assets/BBCReithSans_Md.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: 'ReithSansBold';
+  src: url("../assets/BBCReithSans_Bd.ttf") format('truetype');
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+header {
+  background: #ffd230;
+  font-family: 'ReithSansBold', sans-serif;
+  font-size: 2.375rem;
+  height: 56px;
+  line-height: 56px;
+  padding-left: 8px;
+}
+
+body {
+  background: #000000;
+  font-family: 'ReithSansReg', sans-serif;
+}
+
+h1 { margin: 0; }
+h3 { margin: 0; }
+p { margin: 0; }
+
+
+.type-headlineLg      { font-size: 2rem; line-height: 2.25rem; }
+.type-headlineSm      { font-size: 1.5rem; line-height: 1.625rem; }
+.type-indexHeadlineLg { font-size: 1.5rem; line-height: 1.625rem; }
+.type-indexHeadlineMd { font-size: 1.25rem; line-height: 1.5rem; }
+.type-sectionHeading  { font-size: 1.125rem; line-height: 1.375rem; }
+.type-bodyCopy        { font-size: 1rem; line-height: 1.375rem; }
+.type-indexHeadlineSm { font-size: 1rem; line-height: 1.25rem; }
+.type-indexHeadlineSm { font-size: 1rem; line-height: 1.25rem; }
+.type-desc            { font-size: 0.875rem; line-height: 1.125rem; }
+.type-meta            { font-size: 0.8125rem; line-height: 1rem; }
+.type-labels          { font-size: 0.75rem; line-height: 1rem; }
+
+.container {
+  /* padding-top: 0.5rem; */
+}
+
+.page-margins {
+  width: 100%;
+}
+
+.aside-wrapper {
+  width: 100%;
+}
+
+/* Media item styles */
+
+.media {
+  margin-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.media__image {
+  margin-bottom: 1rem;
+  position: relative;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  -webkit-box-shadow: 0px 12px 12px -12px rgba(0,0,0,0.8);
+  -moz-box-shadow: 0px 12px 12px -12px rgba(0,0,0,0.8);
+  box-shadow: 0px 12px 12px -12px rgba(0,0,0,0.8);
+}
+
+.media__image img {
+  width: 100%;
+}
+
+.media__buttonPlay {
+  background: #000000;
+  bottom: 0px;
+  height: 80px;
+  left: 0px;
+  position: absolute;
+  width: 80px;
+}
+
+.media__buttonPlay:hover {
+  background: #ffd230;
+  transition: all 0.3s ease-in-out;
+}
+
+.media__text {
+  padding: 0 0.5rem;
+  color: #FFFFFF;
+}
+
+.media__text h1 {
+  margin-bottom: 0.75rem;
+}
+
+.media__text p {
+  margin-bottom: 0.75em;
+}
+
+.media__text .attribution {
+  color: #A9A9AB;
+}
+
+/* PROMO STYLES */
+.promo {
+  padding-bottom: 8px;
+}
+
+.promo__text {
+  display: inline-block;
+  color: #FFFFFF;
+  width: 60%;
+  padding-left: 0.5rem;
+}
+
+.promo__text h3 {
+  margin-bottom: 0.25rem;
+}
+
+.promo__image {
+  display: inline-block;
+  width: 40%;
+  max-width: 200px;
+  vertical-align: top;
+}
+
+.promo__image img {
+  width: 100%;
+}
+
+@media only screen and (min-width: 375px) {
+
+  header {
+    padding-left: 16px;
+  }
+
+  .container {
+    /* padding-top: 1rem; */
+  }
+
+  .media__text {
+    padding: 0 1rem;
+  }
+
+}
+
+@media only screen and (min-width: 600px) {
+
+  .type-headlineLg      { font-size: 2.75rem; line-height: 3rem; }
+  .type-headlineSm      { font-size: 2rem; line-height: 2.25rem; }
+  .type-indexHeadlineLg { font-size: 1.75rem; line-height: 2rem; }
+  .type-indexHeadlineMd { font-size: 1.5rem; line-height: 1.75rem; }
+  .type-sectionHeading  { font-size: 1.25rem; line-height: 1.5rem; }
+
+  .container {
+    padding-top: 1rem;
+  }
+
+  .page-margins {
+    max-width: 66.125%;
+    margin: 0 auto;
+  }
+
+  .media__text {
+    padding: 0 0;
+  }
+
+}
+
+@media only screen and (min-width: 768px) {
+
+  header {
+    height: 64px;
+    line-height: 64px;
+    font-size: 2.675rem;
+  }
+
+}
+
+@media only screen and (min-width: 1004px) {
+
+  .container {
+    margin: 0 1rem;
+  }
+
+  .left.page-margins {
+    display: inline-block;
+    max-width: 60%;
+    vertical-align: top;
+    padding-right: 1rem;
+  }
+
+  .aside-wrapper.page-margins {
+    display: inline-block;
+    max-width: 40%;
+  }
+
+  .media__image {
+
+  }
+
+}
+
+@media only screen and (min-width: 1440px) {
+
+}

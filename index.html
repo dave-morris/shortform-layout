@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+<div class="container">
+
+  <div class="left page-margins">
+
+    <div class="media__image">
+      <div class="media__buttonPlay"></div>
+      <img class="" src="{{ site.baseurl }}/assets/placeholder-image.png" alt="">
+    </div>
+
+    <div class="main-wrapper ">
+      {% include media-item.html %}
+    </div>
+
+  </div><div class="aside-wrapper page-margins">
+
+      {% for item in site.data.top-videos limit:10 %}
+        {% include promo-landscape.html %}
+      {% endfor %}
+
+    </div>
+
+
+</div>
