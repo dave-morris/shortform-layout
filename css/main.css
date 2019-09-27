@@ -210,6 +210,14 @@ p { margin: 0; }
     padding: 0;
   }
 
+  .section-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .section-header {
+    padding-top: 1rem;
+  }
+
 }
 
 @media only screen and (min-width: 768px) {
@@ -224,7 +232,19 @@ p { margin: 0; }
 
 @media only screen and (min-width: 1004px) {
 
+
+  .media {
+    width: calc(45% - 0.5rem);
+    position: relative;
+  }
+
+  .promo-list {
+    width: calc(55% - 0.5rem);
+    margin-top: 1rem;
+  }
+
   .page-container.one-columnn {
+    display: flex;
     max-width: 48rem;
   }
 
