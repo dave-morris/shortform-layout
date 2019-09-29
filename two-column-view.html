@@ -6,8 +6,13 @@ layout: default
 
 
   <div class="media__image two-column">
-    <!-- <div class="media__buttonPlay"></div> -->
-    <img class="" src="{{ site.baseurl }}/assets/placeholder-image.png" alt="">
+
+    <video controls poster="{{ site.data.top-videos[0].image }}">
+
+        <source src="{{ site.baseurl }}/assets/video.mp4" type="video/mp4">
+
+    </video>
+
   </div>
 
   {% include media-item.html class="two-column" %}
