@@ -238,24 +238,21 @@
 .homeContainer {
   margin-top: 80px;
   display: flex;
-  height: 300px;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: stretch;
   justify-content: space-around;
   padding: 0 20px;
 }
 
 .homeContainer a {
-  background-color: white;
-  height: 200px;
-  margin-right: 24px;
+  margin: 0 0 20px 0;
   text-align: center;
   padding: 40px;
   border-radius: 8px;
+  background-color: white;
 }
 
-.homeContainer a:last-child {
-  margin: 0;
-}
+
 
 
   @media only screen and (min-width: 375px) {
@@ -313,6 +310,22 @@
       line-height: 64px;
       font-size: 2.675rem;
     }
+
+    .homeContainer {
+      flex-direction: row;
+      padding-bottom: 20px;
+    }
+
+    .homeContainer a {
+      margin-right: 24px;
+
+    }
+
+    .homeContainer a:last-child {
+      margin: 0 0 20px 0;
+    }
+
+
 
   }
 
