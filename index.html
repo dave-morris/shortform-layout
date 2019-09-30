@@ -2,16 +2,20 @@
 layout: default
 ---
 
-<div class="page-container">
+<div id="scrollPosition" class="page-container">
 
 
-  <div class="media__image">
+  <div id="videoContainer" class="media__image">
 
-    <video controls poster="{{ site.data.top-videos[0].image }}">
+    <div id="topVideo" class="videoWrap">
 
-        <source controls src="{{ site.baseurl }}/assets/video.mp4" type="video/mp4">
+      <video id="actualVideo" controls poster="{{ site.data.top-videos[0].image }}">
 
-    </video>
+        <source src="{{ site.baseurl }}/assets/video.mp4" type="video/mp4">
+
+        </video>
+
+    </div>
 
   </div>
 

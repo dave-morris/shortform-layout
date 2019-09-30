@@ -2,16 +2,20 @@
 layout: default
 ---
 
-<div class="page-container one-columnn">
+<div id="scrollPosition" class="page-container one-columnn">
 
 
-  <div class="media__image one-column">
+  <div id="videoContainer" class="media__image one-column">
 
-    <video controls poster="{{ site.data.top-videos[0].image }}">
+    <div id="topVideo" class="videoWrap">
 
-        <source src="{{ site.baseurl }}/assets/video.mp4" type="video/mp4">
+      <video id="actualVideo" controls poster="{{ site.data.top-videos[0].image }}">
 
-    </video>
+          <source src="{{ site.baseurl }}/assets/video.mp4" type="video/mp4">
+
+      </video>
+
+    </div>
 
   </div>
 
@@ -24,7 +28,7 @@ layout: default
   {% include section-header.html %}
 
   {% for item in site.data.top-videos limit:10 %}
-    {% include promo-portrait.html %}
+    {% include promo-landscape.html %}
   {% endfor %}
 
 
