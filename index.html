@@ -2,36 +2,18 @@
 layout: default
 ---
 
-<div id="scrollPosition" class="page-container">
+<div class="homeContainer">
 
+  <a href="{{ site.baseurl }}/one-column-view"><div class="">
+    One column view (Mobile experience at all breakpoints)
+  </div></a>
 
-  <div id="videoContainer" class="media__image">
+  <a href="{{ site.baseurl }}/hybrid-one-column"><div class="">
+    One column video, two columnn promos and text
+  </div></a>
 
-    <div id="topVideo" class="videoWrap">
-
-      <video id="actualVideo" controls poster="{{ site.data.top-videos[0].image }}">
-
-          <source src="{{ site.baseurl }}/assets/video.mp4" type="video/mp4">
-
-      </video>
-
-    </div>
-
-  </div>
-
-  {% include media-item.html id="mediaContainer" %}
-
-
-
-  <div class="promo-list">
-
-  {% include section-header.html %}
-
-  {% for item in site.data.top-videos limit:10 %}
-    {% include promo-landscape.html %}
-  {% endfor %}
-
-
-  </div>
+  <a href="{{ site.baseurl }}/two-column-view"><div class="">
+    One column at mobile breakpoints, two at larger breakpoints 
+  </div></a>
 
 </div>
