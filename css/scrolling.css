@@ -6,6 +6,10 @@
   padding-top: 0.5rem;
 }
 
+.promo.portrait {
+  display: none;
+}
+
 @media only screen and (min-width: 768px) {
 
 }
@@ -37,6 +41,14 @@
     padding-right: 1rem;
     max-height: 100vh;
     overflow-y: scroll;
+  }
+
+  .promo.portrait {
+    display: block;
+  }
+
+  .promo.landscape {
+    display: none;
   }
 
   .video__and__description .media {

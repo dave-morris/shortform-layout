@@ -32,6 +32,10 @@ layout: scrolling
     {% include promo-portrait.html %}
   {% endfor %}
 
+  {% for item in site.data.top-videos limit:10 %}
+    {% include promo-landscape.html %}
+  {% endfor %}
+
 
   </div>
 
