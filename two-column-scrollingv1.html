@@ -1,0 +1,38 @@
+---
+layout: scrolling
+---
+
+<div class="page-container scrolling">
+
+  <div class="video__and__description">
+
+    <div class="media__image__scrolling">
+
+      <video controls poster="{{ site.data.top-videos[0].image }}">
+
+          <source src="{{ site.baseurl }}/assets/video.mp4" type="video/mp4">
+
+      </video>
+
+    </div>
+
+    {% include media-item.html class="" %}
+
+  </div>
+
+
+
+
+
+  <div class="list__of__promos">
+
+  {% include section-header.html %}
+
+  {% for item in site.data.top-videos limit:10 %}
+    {% include promo-portrait.html %}
+  {% endfor %}
+
+
+  </div>
+
+</div>
