@@ -10,8 +10,15 @@
   display: none;
 }
 
-@media only screen and (min-width: 768px) {
+.video__and__description .media__text {
+  padding: 0;
+}
 
+.video__and__description {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: #000000;
 }
 
 .media__image__scrolling video {
