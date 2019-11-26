@@ -2,20 +2,31 @@
 layout: default
 ---
 
-<div id="scrollPosition" class="page-container one-columnn">
+<div class="page-container one-columnn">
 
 
-  <div id="videoContainer" class="media__image one-column">
+  <div class="media__image">
 
-    <div id="topVideo" class="videoWrap">
+    <div class="placeholderVideo">
 
-      <video id="actualVideo" controls poster="{{ site.data.top-videos[0].image }}">
+      <div class="placeholderVideo__text">
+        Video pinned to top of screen
+      </div>
+
+    </div>
+
+    <div id="pinableVideo" class="videoWrap">
+
+      <div id="close" class="close-button"></div>
+
+      <video id="shortformVideo" controls preload poster="{{ site.data.top-videos[0].image }}">
 
           <source src="{{ site.baseurl }}/assets/360-dunk.m4v" type="video/mp4">
 
       </video>
 
     </div>
+
 
   </div>
 

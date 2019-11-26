@@ -1,98 +1,41 @@
-// var videoHeight = document.getElementById("videoContainer").offsetHeight;
-// var windowHeight = window.innerHeight;
-// var maxVideoHeight = windowHeight * 0.4;
-// var mastheadHeight = document.getElementById("sportMasthead").offsetHeight;
-// var videoHeightDifference = videoHeight - maxVideoHeight;
-//
-// // console.log(videoHeightDifference);
-//
-//
-//
-// window.onscroll = function() { checkScreenScroll() };
-//
-// function checkScreenScroll() {
-//
-//   var scrollPosition = document.documentElement.scrollTop;
-//   var progress = ((scrollPosition-mastheadHeight)/(maxVideoHeight-mastheadHeight));
-//   var invertProgress = 1-progress;
-//   var element = document.getElementById("actualVideo");
-//
-//   if (videoHeight >= maxVideoHeight) {
-//
-//     if (scrollPosition <= maxVideoHeight && scrollPosition > mastheadHeight) {
-//
-//       var newVideoHeight = (videoHeightDifference*invertProgress) + maxVideoHeight;
-//
-//       console.log("The height of the video should be " + newVideoHeight + " The original height of the video is " + videoHeight);
-//
-//       element.style.height = newVideoHeight + "px";
-//
-//
-//     } else if (scrollPosition > maxVideoHeight) {
-//
-//       element.style.height = maxVideoHeight + "px";
-//
-//     } else if (scrollPosition < mastheadHeight) {
-//
-//       element.style.height = videoHeight + "px";
-//
-//     }
-//
-//   }
-//
-// }
+//Set element to track whether it leaves or enters the viewport
+const headerEl = document.querySelector('.masthead')
+
+//Set element to change to fixed
+const fixedEl = document.querySelector('#pinableVideo')
+
+//Get the various sizes of important things
+const placeholderVidHeight = document.querySelector('.placeholderVideo').clientHeight;
+const fortyPercentWindowHeight = window.innerHeight*0.4;
+
+//Assign video to const
+const vid = document.getElementById("shortformVideo");
+
+window.addEventListener('resize', function(event){
+
+	const placeholderVidHeight = document.querySelector('.placeholderVideo').clientHeight;
+	const fortyPercentWindowHeight = window.innerHeight*0.4;
+
+	if (fortyPercentWindowHeight < placeholderVidHeight) {
+		fixedEl.classList.add('resizing')
+	} else {
+		fixedEl.classList.remove('resizing')
+	}
+
+});
+
+const observer = new IntersectionObserver((entries) => {
+		if (!entries[0].isIntersecting) {
+      fixedEl.classList.add('enabled')
+    } else {
+      fixedEl.classList.remove('enabled')
+    }
+	})
+
+document.getElementById("close").addEventListener("click", function(){
+	fixedEl.classList.remove('enabled');
+	vid.pause();
+});
 
 
-
-
-//
-// if (document.getElementById('mediaContainer').classList.contains("two-column")) {
-//   //do nothing
-// } else {
-//   // get height of video videoContainer
-//   const videoHeight = document.getElementById("videoContainer").clientHeight;
-//   document.getElementById('mediaContainer').style.top = videoHeight + "px";
-// };
-//
-// window.onresize = function(event) {
-//   const videoHeight = document.getElementById("videoContainer").clientHeight;
-// };
-//
-//
-// window.onscroll = function() { myFunction() };
-//
-// function myFunction() {
-//
-//   var element = document.getElementById("scrollPosition");
-//   var elementTwo = document.getElementById("videoContainer");
-//
-//   if (document.documentElement.scrollTop > 80) {
-//
-//     elementTwo.classList.add("media__image__maxHeight");
-//
-//   } else if (document.documentElement.scrollTop == 0) {
-//
-//     elementTwo.classList.remove("media__image__maxHeight");
-//
-//   }
-//
-//   if (document.getElementById('mediaContainer').classList.contains("two-column")) {
-//
-//     //Do nothing
-//
-//   } else {
-//
-//     // get height of video videoContainer
-//     const videoHeight = document.getElementById("videoContainer").clientHeight;
-//     // console.log("The height of the video is " + videoHeight);
-//     // document.getElementById("actualVideo").style.height = videoHeight;
-//
-//     document.getElementById('mediaContainer').style.top = videoHeight + "px";
-//
-//     window.onresize = function(event) {
-//       const videoHeight = document.getElementById("videoContainer").clientHeight;
-//     };
-//
-//   }
-//
-// }
+observer.observe(headerEl)
